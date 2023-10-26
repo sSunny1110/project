@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Masai Doctor Records</title>
+    <style>
+      h2{
+        text-align: center;
+        color:#0468aa ;
+      }
+      div{
+        display: flex;
+        justify-content: space-around;
+      }
+      form{
+        margin: 0 auto;
+        margin-top: 50px;
+        width: 30%;
+        box-shadow:rgba(149,157,165,0.2) 0px 8px 24px;
+        padding: 30px;
+      }
+      label{
+        font-size: 20px;
+      }
+      table{
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 60%;
+        margin-top: 50px;
+        text-align: center;
+      }
+      table td,
+      table th {
+        border: 1px solid #add;
+        padding:8px;
+        text-align: center;
+      }
+      table tr:nth-child(even){
+        background-color: #8caacf;
+      }
+      table tr:hover{
+        background-color: #add;
+      }
+      table th{
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align:left;
+        background-color: #0468aa;
+        color: white;
+        text-align: center;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      input[type="text"],
+      select,
+      textarea{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize:vertical;
+      }
+      input[type="number"],
+      select,
+      textarea{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize:vertical;
+      }
+      input[type="email"],
+      select,
+      textarea{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize:vertical;
+      }
+      
+      input[type="submit"],
+      select,
+      textarea{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize:vertical;
+        background-color: blue;
+        color: white;
+      }
+      #specialization{
+        width: 100%;
+        padding: 12px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize:vertical;
+        background-color: white;
+        color: black;
+      }
+      input[type="submit"]:hover{
+        background-color: #3973b6;
+      }
+      h1{
+        text-align: center;
+        font-size: 50px;
+        text-transform: uppercase;
+        font-family: monospace;
+        color: #2b619e;
+        text-decoration: underline;
+      }
+      h3{
+        padding-bottom: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><U>HOSPITAL - DOCTOR RECORDS</U></h2>
+    <div>
+        <!-- Use this form for data input  -->
+    <form id="form">
+      <label for="text">Doctor Name</label>
+      <input placeholder="Name" type="text" id="name" />
+      <input placeholder="Doctor ID" type="text" id="doctor_id" />
+      <select id="specialization" type="selection">
+        <option value="">Select Specialization</option>
+        <option value="Dermatologist">Dermatologist</option>
+        <option value="Dentist">Dentist</option>
+        <option value="Gynecologist">Gynecologist</option>
+      </select>
+      <input placeholder="Experience" type="number" id="experience" />
+      <input placeholder="Email" type="email" id="email" />
+      <input placeholder="Mobile No." type="number" id="mobile" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <!-- Use this Select tag for filter part  -->
+    <!-- <select id="filter">
+      <option value="">Select Specialization</option>
+      <option value="Dermatologist">Dermatologist</option>
+      <option value="Dentist">Dentist</option>
+      <option value="Gynecologist">Gynecologist</option>
+    </select> -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Doctor ID</th>
+          <th>Specialization</th>
+          <th>Experience in Years</th>
+          <th>Email</th>
+          <th>Mobile No</th>
+          <th>Role</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Append Rows here using JS & DOM  -->
+      </tbody>
+    </table>
+    </div>
+  </body>
+  </html>
+  <script>
+    document.querySelector('form').addEventListener("submit",myDoctor);
+    let total=0
+    function myDoctor(){
+      event.preventDefault();
+      let Name=document.querySelector("#name").value
+      let DoctorId=document.querySelector("#doctor_id").value
+      let Specialization=document.querySelector("#specialization").value
+      let Experience=document.querySelector("#experience").value
+      let Email=document.querySelector("#email").value
+      let Mobile=document.querySelector("#mobile").value
+
+
+      let DoctorObj={
+        Name:Name,
+        DoctorId:DoctorId,
+        Specialization:Specialization,
+        Experience:Experience,
+        Email:Email,
+        Mobile:Mobile,
+      };
+  displayTable(DoctorObj);
+  total++
+  console.log(total)
+  document.querySelector("#total-doctor").innerText=total
+}
+
+function displayTable(DoctorObj) {
+    
+    var tr = document.createElement("tr");
+    var td1 = document.createElement("td");
+    td1.innerText = DoctorObj.Name;
+
+    var td2 = document.createElement("td");
+    td2.innerText = DoctorObj.DoctorId;
+    
+    var td3 = document.createElement("td");
+    td3.innerText = DoctorObj.Specialization;
+
+    var td4 = document.createElement("td");
+    td4.innerText = DoctorObj.Experience;
+
+    var td5 = document.createElement("td");
+    td5.innerText = DoctorObj.Email;
+
+    var td6 = document.createElement("td");
+    td6.innerText = DoctorObj.Mobile;
+
+   
+    let td7=document.createElement('td')
+    td7.innerText=DoctorObj.Experience
+    if(DoctorObj.Experience>5){
+      td7.innerText="Senior"
+    }
+    else if(DoctorObj.Experience>=2 && DoctorObj.Experience<=5){
+      td7.innerText="Junior"
+    }
+    else if(DoctorObj.Experience<=1){
+      td7.innerText="Trainee"
+    }
+
+    var td8 = document.createElement("td");
+    td8.innerText = "Delete";
+
+    td8.addEventListener("click", deleteRow);
+    td8.style.backgroundColor = "red";
+    tr.append(td1, td2, td3, td4, td5, td6, td7, td8);
+    document.querySelector("tbody").append(tr);
+  ;
+}
+
+function deleteRow() {
+  event.target.parentNode.remove();
+  total--
+  console.log(total)
+  document.querySelector("#total-doctor").innerText=total
+
+}
+</script>
+

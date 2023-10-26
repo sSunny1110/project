@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   .sts{
+    color: rgb(113, 113, 50);
+   }
+   h1{
+    text-align: center;
+   }
+   div{
+    display: flex;
+   margin: auto;
+    width: 450px;
+    justify-content: center;
+    justify-content: space-around;
+   }
+  input{
+    height: 30px;
+    font-weight: bold;
+    border:1px solid  rgb(102, 140, 140);
+  }
+  button{
+    background-color: rgb(142, 190, 190) ;
+    border: 0px;
+  }
+  span{
+    color: rgb(102, 140, 140) ;
+  }
+</style>
+<body>
+    <h1 style="color: rgb(102, 140, 140);">BMI Calculator</h1>
+    <div>
+        <input placeholder="Height in cm" type="number" id="height">
+        <input type="number" placeholder="weight in kg" id="weight">
+        <button id="calculate">Calculate</button>
+    </div>
+    <h1 class="sts"> Your BMI is:- <span id="bmi"></span>
+         <!-- <span id="status"></span> -->
+    </h1>
+    <h1 class="sts"> That means you are <span id="status"></span>
+    </h1>
+    
+</body>
+</html>
+<script>
+   let height=document.querySelector('#height')
+   let weight=document.querySelector('#weight')
+   let submit=document.querySelector('#calculate')
+   let BMI=document.querySelector('#bmi')
+   let Status=document.querySelector('#status')
+    submit.addEventListener('click',calculateBMI)
+    function calculateBMI(){
+        let heightValue=(height.value)/100;
+        let weightValue=weight.value;
+        let bmiValue=(weightValue)/(heightValue*heightValue);
+        let resultValue;
+        if(bmiValue<=18.4){
+            resultValue="UnderWeight"
+        }
+        else if(bmiValue>=18.5 && bmiValue<=24.9){
+            resultValue="Normal Weight"
+        }
+        else if(bmiValue>=25 && bmiValue<=29.9){
+            resultValue="OverWeight"
+        }
+        else if(bmiValue>=30){
+            resultValue="Obese"
+        }
+        BMI.textContent=bmiValue
+        Status.textContent=resultValue
+    }
+</script> 
