@@ -4,8 +4,9 @@
     <title>Employee Records</title>
     <style>
       h2{
+       font-size: 40px;
         text-align: center;
-        color:#0468aa ;
+        color:#aa8e04 ;
       }
         /* div{
          display: flex; 
@@ -16,7 +17,8 @@
         margin: 0 auto;
         margin-top: 50px;
         width: 30%;
-        box-shadow:rgba(149,157,165,0.2) 0px 8px 24px;
+        box-shadow: rgba(174, 153, 153, 0.35) 0px 5px 15px;
+        /* box-shadow:rgba(215, 178, 14, 0.2) 0px 8px 24px; */
         padding: 30px;
       }
       label{
@@ -32,21 +34,21 @@
       }
       table td,
       table th {
-        border: 1px solid #add;
+        border: 1px solid rgb(235, 232, 52);
         padding:8px;
         text-align: center;
       }
       table tr:nth-child(even){
-        background-color: #8caacf;
+        background-color: #dacd3f;
       }
       table tr:hover{
-        background-color: #add;
+        background-color: rgb(237, 217, 144);
       }
       table th{
         padding-top: 12px;
         padding-bottom: 12px;
         text-align:left;
-        background-color: #0468aa;
+        background-color: #a18d1a;
         color: white;
         text-align: center;
       }
@@ -101,7 +103,7 @@
         margin-top: 6px;
         margin-bottom: 16px;
         resize:vertical;
-        background-color: blue;
+        background-color: rgb(117, 76, 19);
         color: white;
       }
       #department{
@@ -129,7 +131,7 @@
     </style>
   </head>
   <body>
-    <h2><U>MASAI EMPLOYEE  RECORDS</U></h2>
+    <h2><U>EMPLOYEE  RECORDS</U></h2>
     <div>
        <!-- Use this form for taking the inputs  -->
     <form>
@@ -157,7 +159,7 @@
     <table>
       <thead>
         <tr>
-          <th>Name</th>
+          <th>Name</th> 
           <th>Employee ID</th>
           <th>Department</th>
           <th>Experience in Years</th>
@@ -174,6 +176,7 @@
     </div>
   </body>
   </html>
+  
   <script>
     document.querySelector('form').addEventListener("submit",myEmployee);
     let total=0
@@ -242,7 +245,7 @@ function displayTable(EmployeeObj) {
     td8.style.backgroundColor = "red";
     tr.append(td1, td2, td3, td4, td5, td6, td7, td8);
     document.querySelector("tbody").append(tr);
-  ;
+    ;
 }
 
 function deleteRow() {
