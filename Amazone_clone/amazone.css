@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(203, 58, 164);
+    background-color:rgb(233, 185, 220);
 }
 * {
     margin: 0;
@@ -179,7 +179,7 @@ span{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color:rgb(203, 58, 164);
+    background-color:rgb(233, 185, 220);
     margin-bottom: 15px;
 }
 .box{
@@ -210,8 +210,7 @@ span{
     width: 96.5%;
     margin: auto;
     background-color: white;
-    
-   
+    margin-bottom:15px;
 }
 .trending-sec h2{
     padding-left: 10px;
@@ -227,6 +226,9 @@ span{
     background-color: beige;
     margin-bottom: 25px;
 }
+.trending-container p{
+    font-size:0.85rem;
+}
 .trending-box{
     width: 16%;
     height: 230px;
@@ -239,11 +241,102 @@ span{
 
 /* ..................................................Train-section....................................... */
 .train-sec{
+    width: 96.5%;
     height: 250px;
+    margin: auto;
 }
 .train-img{
     height: 250px;
     background-size: cover;
 }
 
+/* ...........................................shop-section-second............................................. */
 
+.shop-section-second{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color:rgb(233, 185, 220);
+    margin-bottom:15px;
+}
+.shop-section-second .box-img{
+    height: 250px;
+}
+a{
+    text-decoration: none;
+}
+
+/* .........................................................Home-Furnishing................................................... */
+.home-furnishing{
+    height: 250px;
+    width:60%;
+    margin: auto;
+}
+.furnishing-img{
+    height: 250px;
+    background-size: cover;
+}
+
+ /* ..........................................Footer-part............................................. */
+footer{
+    margin-top: 15px;
+}
+ .foot-panel1{
+    background-color:#37475a;
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+ }
+ .foot-panel2{
+    background-color: #222f3d;
+    height: 300px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+ }
+ ul{
+    margin-top: 20px;
+ }
+ ul a{
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #dddddd;
+ }
+
+ .foot-panel3{
+    background-color: #222f3d;
+    color: white; 
+    border-top:0.1px solid #a3d9e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    background-image: url("../amazon_logo.png");
+    background-size: cover;
+    height: 50px;
+    width:100px;
+}
+
+.foot-panel4{
+    background-color: #0f1111;
+    color: white;
+    height: 100px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+.pages{
+    
+    padding-top: 25px;
+}
+.pages a{
+    padding-right: 20px;
+    color: white;
+}
+.copyright{
+    padding-top: 5px;
+}
