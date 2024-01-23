@@ -1,21 +1,6 @@
 div{
   display: flex;
   justify-content: center;
-}
-form {
-  margin: 0 auto;
-  margin-top: 50px;
-  width: 30%;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding: 30px;
-}
-
-
-
-label {
-  font-size: 20px;
-}div {
-  display: flex;
   justify-content: space-around;
 }
 form {
@@ -25,16 +10,11 @@ form {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 30px;
 }
-
-
-
 label {
   font-size: 20px;
 }
-
 table {
   font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
   width: 60%;
   margin: auto;
   margin-top: 50px;

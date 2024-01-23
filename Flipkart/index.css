@@ -1,0 +1,797 @@
+/* ....................//////.....................Header Of Flipkart............../////.................................... */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    background-color: rgb(215, 246, 235);
+}
+header{
+    background-color: #ffffff;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content:space-evenly;
+    margin: auto;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+/* ........................................Input Section And logo of Flipkart...................... */
+.logocontainer{
+    display: flex;
+    width: 700px;
+}
+.logo{
+    width: 135px;
+    height: 40px;
+    background-image: url(https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus_mobile-39120d.svg);
+    background-size: cover;
+    cursor: pointer;
+}
+.searchbar{
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+  
+}
+ 
+.icon{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    padding: 8px 8px 8px 8px;
+    background-color:rgb(226, 237, 243);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.searchbar input{
+    height: 40px;
+    width: 500px;
+    font-size: 18px;
+    background-color:rgb(226, 237, 243);
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0px 10px 0px 10px;
+}
+.searchbar input:focus{
+    outline: none;
+}
+
+/* ...............................User Name Section....................... */
+.details{
+    width: 637px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.username{
+    width: 127px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-evenly;
+}
+.username .icon1{
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 8px 0px 8px;
+}
+.username span{
+    width: 47px;
+    font: 16px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.username select{
+    border: none;
+}
+.profile{
+    font-size: 24px;
+    cursor: pointer;
+}
+.icom_more{
+    font-size: 24px;
+    
+}
+
+.drop_down{
+    position: absolute;
+    top: 55px;
+    height: 350px;
+    width: 250px;
+    margin-left: 25px;
+    background-color:white;    
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: none;
+}
+.block p:hover{
+    font-weight:bolder;
+}
+
+.block{
+    display: flex;
+    padding: 10px 10px;
+    font-size: 16px;
+    align-items: center;
+}
+.block .icons{
+    padding-right: 10px;
+}
+.username:hover{
+    .icon_more{
+        transform: rotate(-180deg);
+        transition: transform 0.6s;
+    }
+    border:0.2px solid rgb(222, 218, 218);
+    border-radius: 10px;
+
+    .drop_down{
+        display: inline-block;
+    }
+}
+
+/* ...........................Cart Section....................... */
+.cart{
+    font-size: 20px;
+    width: 104px;
+    height: 41.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.cart:hover{
+    border:0.2px solid rgb(222, 218, 218);
+    border-radius: 10px;
+}
+.cart a{
+    font-size: 20px;
+    text-decoration: none;
+    padding-left: 10px;
+    color:black;
+    height: 32.44;
+}
+/* ...............................Seller Section.................................. */
+.seller{
+    font-size: 20px;
+    width: 204px;
+    height: 41.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.seller a{
+    font-size: 20px;
+    text-decoration: none;
+    padding-left: 10px;
+    color:black;
+}
+.seller:hover{
+    border:0.2px solid rgb(222, 218, 218);
+    border-radius: 10px;
+}
+/* ............................Three Dots................................ */
+.three_dot{
+    width: 41px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.three_dot:hover{
+    border:0.2px solid rgb(222, 218, 218);
+    border-radius: 10px;
+    .drop_down2{
+        display: inline-block;
+    }
+}
+
+.drop_down2{
+    position: absolute;
+    top: 55px;
+    height: 160px;
+    width: 250px;
+    margin-right: 195px;
+    background-color:white;    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    display: none;
+}
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/*<!-- .......................................................Menu Bar............................................................... --> */
+
+.Menu_bar{
+    height: 142px;
+    width: 98%;
+    margin: auto;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.Menu_bar .box{
+    width:130px;
+    height:142px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inside_image_box{
+    width: 120px;
+    height: 93px;
+    justify-content: center;
+}
+
+.Menu_bar .image{
+    width: 64px;
+    height: 64px;
+    margin:0px 12px;
+    margin: auto;
+}
+.Menu_bar span{
+    width:105px;
+    height: 18.8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin: auto;
+    margin-top: 8px;
+    display: flex;
+    justify-content:space-evenly;
+}
+.Menu_bar .box5{
+    width: 170px;
+}
+.box3:hover{
+    .fash_icon{
+        transform: rotate(-180deg);
+        transition: transform 0.6s;
+    }
+    color: rgb(35, 35, 91);
+    .fashion_drop_down{
+        display:inline-block;
+    }
+}
+.box4:hover{
+    .electronics_icon{ 
+        transform: rotate(-180deg);
+        transition: transform 0.6s;
+    }
+    color: rgb(35, 35, 91);
+    .electronics_drop_down{
+        display: inline-block;
+    }
+}
+.box5:hover{
+    i{
+        transform: rotate(-180deg);
+        transition: transform 0.6s;
+    }
+    color: rgb(35, 35, 91);
+    .home_furniture_drop_down{
+        display: inline-block;
+    }
+}
+.box8:hover{
+    i{
+        transform: rotate(-180deg);
+        transition: transform 0.6s;
+    }
+    color: rgb(35, 35, 91);
+    .beauty_toys_drop_down{
+        display: inline-block;
+    }
+}
+.box9:hover{
+    i{
+        transform: rotate(-180deg);
+        transition: transform 0.6s;
+    }
+    color: rgb(35, 35, 91);
+    .two_wheelers_drop_down{
+        display: inline-block;
+    }
+}
+.Menu_bar .box5 .inside_image_box{
+    width: 160px;
+}
+.Menu_bar .box5 span{
+    width:145px;
+}
+.Menu_bar .box8{
+    width: 170px;
+}
+.Menu_bar .box8 .inside_image_box{
+    width: 160px;
+}
+.Menu_bar .box8 span{
+    width:155px;
+}
+
+.Menu_bar .box9{
+    width: 150px;
+}
+.Menu_bar .box9 .inside_image_box{
+    width: 140px;
+}
+.Menu_bar .box9 span{
+    width:120px;
+}
+.Menu_bar .img1{
+    background-image: url(image/img1.webp);
+    background-size: cover;
+ }
+ .Menu_bar .img2{
+    background-image: url(image/img2.webp);
+    background-size: cover;
+ }
+ .Menu_bar .img3{
+    background-image: url(image/img3.webp);
+    background-size: cover;
+ }
+ .Menu_bar .img4{
+    background-image: url(image/img4.webp);
+    background-size: cover;
+ }
+ .Menu_bar .img5{
+    background-image: url(image/img5.webp);
+    background-size: cover;
+ }
+ .Menu_bar .img6{
+    background-image: url(image/img6.webp);
+    background-size: cover;
+ }
+ .Menu_bar .img7{
+    background-image: url(image/img7.webp);
+    background-size: cover;
+ }
+ .Menu_bar .img8{
+    background-image: url(image/img8.webp);
+    background-size: cover;
+ }
+ .Menu_bar .img9{
+    background-image: url(image/img9.webp);
+    background-size: cover;
+ }
+/* ----------------------------------------------------------------------- */
+.fashion_drop_down{
+     position: absolute;
+    top: 200px;
+    height: auto;
+    width: 250px;
+    margin-right: 195px;
+    background-color:white;    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px; 
+    display: none;
+}
+
+.fashion_drop_down .fash_box{
+    display: flex;
+    padding: 10px 10px;
+    font-size: 16px;
+    align-items: center;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+.fash_box i{
+    font-size: 10px;
+    display: none;
+}
+.fashion_drop_down .fash_box:hover{
+    .men_wear{
+        font-weight:550;
+    }
+    i{
+        display: inline-block;
+    }
+    .p1{
+        font-weight: bold;
+    }
+    .mens_top_drop_drown{
+        display: inline-block;
+    }
+    .mens_bottom_drop_drown{
+        display: inline-block;
+    }
+    .women_ethnic_drop_drown{
+        display: inline-block;
+    }
+    .women_western_drop_drown{
+        display: inline-block;
+    }
+    .men_footwear_drop_drown{
+        display: inline-block;
+    }
+    .women_footwear_drop_drown{
+        display: inline-block;
+    }
+    .watch_and_accessories_drop_drown{
+        display:inline-block;
+    }
+    .bag_and_suitcase_drop_drown{
+        display: inline-block;
+    }
+    .kids_drop_drown{
+        display: inline-block;
+    }
+    .essentials_drop_drown{
+        display: inline-block;
+    }
+    .winter_drop_drown{
+        display: inline-block;
+    }
+    background-color: rgb(230, 241, 246);
+}
+
+.mens_top_drop_drown , .mens_bottom_drop_drown , .women_ethnic_drop_drown , .women_western_drop_drown , .men_footwear_drop_drown , .women_footwear_drop_drown , .watch_and_accessories_drop_drown , .bag_and_suitcase_drop_drown , .kids_drop_drown , .essentials_drop_drown , .winter_drop_drown{
+    position: absolute;
+    left: 240px;
+    top: 0px;
+    width: 250px;
+    margin-right: 195px;
+    background-color:white;    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px; 
+    display: none;
+}
+.mens_top_box , .mens_bottom_box , .women_ethnic_box , .women_western_box , .men_footwear_box , .women_footwear_box , .watch_and_accessories_box , .bag_and_suitcase_box , .kids_box , .essentials_box , .winter_box{
+    display: flex;
+    padding: 10px 10px;
+    font-size: 16px;
+    align-items: center;
+}
+.mens_top_box:hover , .mens_bottom_box:hover , .women_ethnic_box:hover , .women_western_box:hover , .men_footwear_box:hover , .women_footwear_box:hover , .watch_and_accessories_box:hover , .bag_and_suitcase_box:hover , .kids_box:hover , .essentials_box:hover , .winter_box:hover{
+    p{
+        font-weight: bold;
+    }
+    background-color: rgb(230, 241, 246);
+}
+
+/* ---------------------------------------------------------- */
+.electronics_drop_down{
+    position: absolute;
+    top: 200px;
+    height: auto;
+    width: 250px;
+    margin-right: 195px;
+    background-color:white;    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px; 
+    display: none;
+}
+.electronics_box{
+    display: flex;
+    padding: 10px 10px;
+    font-size: 16px;
+    align-items: center;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+.electronics_box i{
+    font-size: 10px;
+    display: none;
+}
+.electronics_box:hover{
+    i{
+        display: inline-block;
+    }
+    .p1{
+        font-weight: bold;
+    }
+    background-color:rgb(230, 241, 246);
+    .audio_drop_down{
+        display: inline-block;
+    }
+    .camera_accessories_drop_down{
+        display: inline-block;
+    }
+    .computer_peripherals_drop_down{
+        display: inline-block;
+    }
+    .gaming_drop_down{
+        display: inline-block;
+    }
+    .health_personal_drop_down{
+        display: inline-block;
+    }
+    .laptop_accessories_drop_down{
+        display: inline-block;
+    }
+    .laptop_desktop_drop_down{
+        display: inline-block;
+    }
+    .mobile_accessory_drop_down{
+        display: inline-block;
+    }
+    .powerbank_drop_down{
+        display: inline-block;
+    }
+    .smart_home_automation_drop_down{
+        display: inline-block;
+    }
+    .smart_wearables_drop_down{
+        display: inline-block;
+    }
+    .storage_drop_down{
+        display: inline-block;
+    }
+    .tablets_drop_down{
+        display: inline-block;
+    }
+}
+.audio_drop_down , .camera_accessories_drop_down , .computer_peripherals_drop_down , .gaming_drop_down , .health_personal_drop_down , .laptop_accessories_drop_down , .laptop_desktop_drop_down , .mobile_accessory_drop_down , .powerbank_drop_down , .smart_home_automation_drop_down , .smart_wearables_drop_down , .storage_drop_down , .tablets_drop_down{
+    position: absolute;
+    left: 240px;
+    top: 0px;
+    width: 250px;
+    height:auto;
+    margin-right: 195px;
+    background-color:white;    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px; 
+    display: none;
+}
+.audio_box , .camera_accessories_box , .computer_peripherals_box , .gaming_box , .health_personal_box , .laptop_accessories_box , .laptop_desktop_box , .mobile_accessory_box , .powerbank_box , .smart_home_automation_box , .smart_wearables_box , .storage_box , .tablets_box{
+    display: flex;
+    padding: 10px 10px;
+    font-size: 16px;
+    align-items: center;
+}
+.audio_box:hover , .camera_accessories_box:hover , .computer_peripherals_box:hover , .gaming_box:hover , .health_personal_box:hover , .laptop_accessories_box:hover , .laptop_desktop_box:hover , .mobile_accessory_box:hover , .powerbank_box:hover , .smart_home_automation_box:hover , .smart_wearables_box:hover , .storage_box:hover , .tablets_box:hover{
+    p{
+        font-weight: bold;
+    }
+    background-color: rgb(230, 241, 246);
+}
+/* /////////////////////////////////////////////////////// */
+.home_furniture_drop_down{
+    position: absolute;
+    top: 200px;
+    height: auto;
+    width: 250px;
+    margin-right: 195px;
+    background-color:white;    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px; 
+    display: none;
+}
+.home_furniture_box{
+    display: flex;
+    padding: 10px 10px;
+    font-size: 16px;
+    align-items: center;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+.home_furniture_box i{
+    font-size: 10px;
+    display: none;
+}
+.home_furniture_box:hover{
+    i{
+        display: inline-block;
+    }
+    .p1{
+        font-weight: bold;
+    }
+    background-color:rgb(230, 241, 246);
+    .home_furnishinhgs_drop_down{
+        display: inline-block;
+    }
+    .living_room_furniture_drop_down{
+        display:inline-block;
+    }
+    .kitchen_dining_drop_down{
+        display: inline-block;
+    }
+    .bedroom_furniture_drop_down{
+        display: inline-block;
+    }
+    .space_saving_furniture_drop_down{
+        display: inline-block;
+    }
+    .home_decor_drop_down{
+        display: inline-block;
+    }
+    .tools_utility_drop_down{
+        display: inline-block;
+    }
+    .work_space_furniture_drop_down{
+        display: inline-block;
+    }
+    .kids_furniture_drop_down{
+        display: inline-block;
+    }
+    .lightinings_electricals_drop_down{
+        display: inline-block;
+    }
+    .cleaning_bath_drop_down{
+        display: inline-block;
+    }
+    .pet_gardening_drop_down{
+        display: inline-block;
+    }
+}
+.home_furnishinhgs_drop_down , .living_room_furniture_drop_down , .kitchen_dining_drop_down , .bedroom_furniture_drop_down , .space_saving_furniture_drop_down , .home_decor_drop_down , .tools_utility_drop_down , .work_space_furniture_drop_down , .kids_furniture_drop_down , .lightinings_electricals_drop_down , .cleaning_bath_drop_down , .pet_gardening_drop_down{
+    position: absolute;
+    left: 240px;
+    top: 0px;
+    width: 250px;
+    height:auto;
+    margin-right: 195px;
+    background-color:white;    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px; 
+    display: none;
+}
+.home_furnishinhgs_box , .living_room_furniture_box , .kitchen_dining_box , .bedroom_furniture_box , .space_saving_furniture_box , .home_decor_box , .tools_utility_box , .work_space_furniture_box , .kids_furniture_box , .lightinings_electricals_box , .cleaning_bath_box , .pet_gardening_box{
+    display: flex;  
+    padding: 10px 10px;
+    font-size: 16px;
+    align-items: center;
+}
+.home_furnishinhgs_box:hover , .living_room_furniture_box:hover , .kitchen_dining_box:hover , .bedroom_furniture_box:hover , .space_saving_furniture_box:hover , .home_decor_box:hover , .tools_utility_box:hover , .work_space_furniture_box:hover , .kids_furniture_box:hover , .lightinings_electricals_box:hover , .cleaning_bath_box:hover , .pet_gardening_box:hover{
+    p{
+        font-weight: bold;
+    }
+    background-color: rgb(230, 241, 246);
+}
+/* /////////////////////////////////////// */
+.beauty_toys_drop_down{
+    position: absolute;
+    top: 200px;
+    height: auto;
+    width: 250px;
+    margin-right: 195px;
+    background-color:white;    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px; 
+    display: none;
+}
+.beauty_toys_box{
+    display: flex;
+    padding: 10px 10px;
+    font-size: 16px;
+    align-items: center;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 15px;
+}
+.beauty_toys_box i{
+    font-size: 10px;
+    display: none;
+}
+.beauty_toys_box:hover{
+    i{
+        display: inline-block;
+    }
+    .p1{
+        font-weight: bold;
+    }
+    background-color:rgb(230, 241, 246);
+    .beauty_personalcare_drop_down{
+        display: inline-block;
+    }
+    .mens_grooming_drop_down{
+        display: inline-block;
+    }
+    .food_drinks_drop_down{
+        display: inline-block;
+    }
+    .nutrition_health_care_drop_down{
+        display: inline-block;
+    }
+    .baby_care_drop_down{
+        display: inline-block;
+    }
+    .toys_school_supplies_drop_down{
+        display: inline-block;
+    }
+    .sports_fitness_drop_down{
+        display: inline-block;
+    }
+    .books_drop_down{
+        display: inline-block;
+    }
+    .music_drop_down{
+        display: inline-block;
+    }
+    .stationery_office_supplies_drop_down{
+        display: inline-block;
+    }
+    .auto_accessories_drop_down{
+        display: inline-block;
+    }
+    .safety_hygiene_essentials_drop_down{
+        display: inline-block;
+    }
+}
+.beauty_personalcare_drop_down , .mens_grooming_drop_down , .food_drinks_drop_down , .nutrition_health_care_drop_down , .baby_care_drop_down , .toys_school_supplies_drop_down , .sports_fitness_drop_down , .books_drop_down , .music_drop_down , .stationery_office_supplies_drop_down , .auto_accessories_drop_down , .safety_hygiene_essentials_drop_down{
+    position: absolute;
+    left: 240px;
+    top: 0px;
+    width: 250px;
+    height:auto;
+    margin-right: 195px;
+    background-color:white;    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px; 
+    display: none;
+}
+.beauty_personalcare_box , .mens_grooming_box , .food_drinks_box , .nutrition_health_care_box , .baby_care_box , .toys_school_supplies_box , .sports_fitness_box , .books_box , .music_box , .stationery_office_supplies_box , .auto_accessories_box , .safety_hygiene_essentials_box{
+    display: flex;  
+    padding: 10px 10px;
+    font-size: 16px;
+    align-items: center;
+}
+.beauty_personalcare_box:hover , .mens_grooming_box:hover , .food_drinks_box:hover , .nutrition_health_care_box:hover , .baby_care_box:hover , .toys_school_supplies_box:hover , .sports_fitness_box:hover , .books_box:hover , .music_box:hover , .stationery_office_supplies_box:hover , .auto_accessories_box:hover , .safety_hygiene_essentials_box:hover{
+    p{
+        font-weight: bold;
+    }
+    background-color: rgb(230, 241, 246);
+}
+
+.two_wheelers_drop_down{
+    position: absolute;
+    top: 200px;
+    right:5px;
+    height: auto;
+    width: 230px;
+    background-color:white;    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px; 
+    display: none;
+}
+.two_wheelers_box{
+    display: flex;
+    padding: 10px 10px;
+    font-size: 16px;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+}
+.two_wheelers_box:hover{
+    .p1{
+        font-weight: bold;
+    }
+    background-color:rgb(230, 241, 246);
+}

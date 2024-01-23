@@ -3,7 +3,7 @@ let total=0
 function myTodo() {
   event.preventDefault();
   var priority = document.querySelector("#priority").value;
-
+  var priority= document.querySelector("#priority").value;
   var taskObj = {
     taskName: document.querySelector("#task").value,
     priority: priority,
